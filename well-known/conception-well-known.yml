@@ -1,0 +1,94 @@
+generated: '2026-08-09'
+method: probed
+source: live probes of /.well-known/ and contract-discovery paths on Conception hosts
+result: >-
+  none - no /.well-known/ document and no machine-readable API contract is published
+  on any Conception host. www.conception.bio is a two-page Framer marketing site
+  (homepage plus one science-update post); there is no API host, docs host or console
+  to probe.
+hosts:
+- host: https://www.conception.bio
+  platform: Framer (sites.framer.app, 31.43.160.6 / 31.43.161.6)
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+  - path: /openapi.json
+    status: 404
+  - path: /openapi.yaml
+    status: 404
+  - path: /swagger.json
+    status: 404
+  - path: /v1/openapi.json
+    status: 404
+  - path: /api-docs
+    status: 404
+  - path: /redoc
+    status: 404
+  - path: /graphql
+    status: 404
+  - path: /mcp
+    status: 404
+  - path: /robots.txt
+    status: 200
+    note: >-
+      Three lines - "User-agent: *", "Allow: /", and a Sitemap reference. No AI-crawler
+      block list, no disallowed paths.
+  - path: /sitemap.xml
+    status: 200
+    note: >-
+      Lists exactly two URLs - the homepage and
+      /science-and-updates/the-first-early-human-eggs-from-stem-cells
+  - path: /docs
+    status: 404
+  - path: /api
+    status: 404
+  - path: /careers
+    status: 404
+    note: careers is an on-page anchor (/#careers) linking out to jobs.ashbyhq.com/Conception
+  - path: /contact
+    status: 404
+    note: contact is a mailto:hello@conception.bio link in the page footer
+- host: https://conception.bio
+  note: identical results to the www host on every path above (same Framer origin)
+hosts_that_do_not_resolve:
+- api.conception.bio
+- docs.conception.bio
+- developer.conception.bio
+- dev.conception.bio
+- app.conception.bio
+- portal.conception.bio
+- mcp.conception.bio
+- status.conception.bio
+contract_discovery:
+  openapi: >-
+    not found - every REST spec path returned 404 on both hosts, and no API host
+    exists to probe at its root
+  graphql: not applicable - /graphql 404s and there is no API host
+  mcp: not found - no hosted MCP server, no mcp. subdomain, /mcp 404s
+  a2a_agent_card: >-
+    not found - both /.well-known/agent-card.json and the legacy
+    /.well-known/agent.json return a genuine 404 (not an SPA catch-all 200) on both
+    hosts. No a2a/ artifact is written.
+  conclusion: >-
+    Conception publishes no machine-readable API contract of any kind. This is a
+    completed negative result, not an unfinished probe.
+x-evidence:
+  fetched: '2026-08-09'
+  method: curl GET with redirect-following, 15s timeout, both apex and www hosts
+  dns_method: dig +short A on candidate API/docs subdomains

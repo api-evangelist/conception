@@ -1,0 +1,38 @@
+generated: '2026-08-09'
+method: searched
+source: registry searches of npm, PyPI, RubyGems, crates.io, Packagist and GitHub (2026-08-09)
+result: none
+notes: >-
+  Conception publishes no client SDK, because it publishes no public API. It is a
+  stem-cell therapeutics research company, not a software vendor. Every registry query
+  below returned either zero results or unrelated fuzzy matches on the common English
+  word "conception". No `SDKs` pointer is wired in apis.yml and the sdk_count checks
+  are correctly left unearned.
+packages: []
+registries_checked:
+- registry: npm
+  query: conception.bio
+  result: 0 packages; the @conception scope does not exist (404 on @conception/sdk)
+- registry: pypi
+  query: conception, conception-bio, conceptionbio
+  result: 404 - no project under any spelling
+- registry: rubygems
+  query: conception.bio
+  result: empty result set
+- registry: crates.io
+  query: conception
+  result: >-
+    6,351 fuzzy matches on the substring, none first-party (top hits are
+    chaotic_semantic_memory, typedb-driver, meta-language)
+- registry: packagist
+  query: conception
+  result: >-
+    unrelated French-language matches (imanaging-document/conception-document-bundle,
+    asddaniel/concept)
+- registry: github
+  query: orgs/conception, orgs/conception-bio, orgs/conceptionbio
+  result: >-
+    github.com/conception exists (id 1663747, created 2012, Rio de Janeiro,
+    blog www.conception.com.br, 0 public repositories) and is a DIFFERENT company -
+    not the Berkeley biotech. conception-bio and conceptionbio both 404. Conception
+    has no GitHub organization, so no `GitHubOrganization` pointer is wired.

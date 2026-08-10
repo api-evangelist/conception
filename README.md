@@ -42,5 +42,21 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Conception is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://forgeglobal.com/conception_stock/
+Conception is a Berkeley, California biotechnology company founded in 2018 (originally as Ovid Research) by CEO Matt Krisiloff. It is building in-vitro gametogenesis (IVG) as a clinical therapy — reprogramming a patient's blood cells into induced pluripotent stem cells, then guiding them through primordial germ cell, oogonia and follicle stages inside engineered three-dimensional ovarian organoids until they mature into viable human eggs. In an update published 2026-08-07 the company reported the first fully stem-cell-derived human ovarian follicles containing early oocytes progressing through meiosis. It has raised roughly USD 38 million.
+
+**Conception publishes no API.** It is a wet-lab therapeutic research company, not a software vendor. Its entire public web presence is a two-page Framer marketing site plus an Ashby job board. Every `/.well-known/` path, `/openapi.json`, `/graphql`, `/mcp` and `/llms.txt` returns a genuine 404 on both `conception.bio` and `www.conception.bio`, and no `api.`, `docs.` or `developer.` subdomain resolves in DNS. That negative result is recorded with status codes in `well-known/conception-well-known.yml`.
+
+- Website: https://www.conception.bio/
+- Science and updates: https://www.conception.bio/science-and-updates
+- Careers: https://jobs.ashbyhq.com/Conception
+- Secondary market: https://forgeglobal.com/conception_stock/
+
+### What is in this repo
+
+| Path | What it holds |
+|---|---|
+| `well-known/conception-well-known.yml` | Full `/.well-known/` + contract-discovery probe record (all misses, with status codes) |
+| `packages/conception-packages.yml` | Registry search record — no first-party packages on npm, PyPI, RubyGems, crates.io or Packagist |
+| `conformance/conception-conformance.yml` | FDA/ISSCR regime status; API standards recorded as not-applicable |
+| `security/conception-domain-security.yml` | TLS/HSTS/DNSSEC/SPF/DMARC probe of conception.bio |
+| `llms/conception-llms.txt` | Generated llms.txt profile of the company |

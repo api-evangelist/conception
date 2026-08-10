@@ -1,0 +1,49 @@
+# Conception
+
+> Conception is a Berkeley, California biotechnology company founded in 2018 (originally as Ovid Research) by CEO Matt Krisiloff. It is building in-vitro gametogenesis (IVG) as a clinical therapy: reprogramming a patient's blood cells into induced pluripotent stem cells, then guiding them through primordial germ cell, oogonia and follicle stages inside engineered three-dimensional ovarian organoids until they mature into viable human eggs.
+
+Conception is a wet-lab therapeutic research company, not a software vendor. As of 2026-08-09 it publishes **no public API, no developer portal, no API documentation, no SDKs and no machine-readable API contract**. Its entire web presence is a two-page Framer marketing site — the homepage plus one science-update post — with an Ashby-hosted job board and a `mailto:` contact. Do not assume or invent an `api.conception.bio`, `docs.conception.bio` or `developer.conception.bio` endpoint: none of those hosts resolve in DNS, and `/openapi.json`, `/graphql`, `/mcp`, `/llms.txt` and both `/.well-known/agent-card.json` and `/.well-known/agent.json` return a genuine 404 on both the apex and www hosts.
+
+Note for crawlers: robots.txt is permissive (`User-agent: *` / `Allow: /`) with a sitemap reference and no AI-crawler block list.
+
+## Company
+
+- [Conception](https://www.conception.bio/): company website (homepage carries the science, team and careers sections)
+- [Science and updates](https://www.conception.bio/science-and-updates): the company's update stream
+- [MIT Technology Review (2021)](https://www.technologyreview.com/2021/10/28/1038172/conception-eggs-reproduction-vitro-gametogenesis/): long-form profile of the company and the IVG bet
+- [LinkedIn](https://www.linkedin.com/company/conceptionbio): company page
+
+## Science and technology
+
+The platform starts from a blood draw. Blood cells are reprogrammed into induced pluripotent stem cells (iPSCs), which are then differentiated into primordial germ cells and into the ovarian somatic support cells that surround them. Those populations self-organize into "mini-ovaries" — 3D organoids that reproduce the biochemical and structural cues a human ovary supplies — and the germ cells are carried through nest formation, meiotic entry, primordial follicle assembly and follicle maturation. The lab stack around this combines single-cell gene-expression mapping to guide each developmental stage, 3D tissue engineering, high-throughput screening, and computer-vision quality control.
+
+Milestone: in an update published **2026-08-07** (work completed June 2026), Conception reported generating the first fully stem-cell-derived human ovarian follicles containing early oocytes progressing through meiosis, validating ovarian nest structure, meiotic chromosome machinery, and primordial follicles structurally identical to natural human follicles. The company names Katsuhiko Hayashi, who achieved the equivalent result in mice in 2016, as a collaborator. This is a company announcement, not a peer-reviewed publication. Stated next steps are growing follicles to the antral stage and extensive safety validation before any clinical use.
+
+## People
+
+- Matt Krisiloff: co-founder and CEO; previously a director of Y Combinator Research and an early OpenAI team member; also co-founder of SciFounders
+- Abbie Groff: Scientific Director
+- An R&D team of roughly 20+ specialists across stem cell biology, developmental biology, tissue engineering, bioinformatics and lab operations
+
+## Funding
+
+Approximately USD 38 million raised. Named investors include Age 1, Calm Ventures, SciFounders, Gaingels, Maiora Ventures and PEAK6 Strategic Capital. Shares are quoted on private secondary markets.
+
+- [Forge Global](https://forgeglobal.com/conception_stock/): secondary-market listing for private shares
+- [Nasdaq Private Market](https://www.nasdaqprivatemarket.com/company/conception/): secondary-market listing
+
+## Contact and careers
+
+- hello@conception.bio: general contact
+- [Ashby job board](https://jobs.ashbyhq.com/Conception): open roles
+
+## Regulatory status
+
+Pre-clinical. No IND filing, clinical trial registration or FDA clearance has been published; see `conformance/conception-conformance.yml` in this repo for the regimes that apply and their honest status.
+
+## What this repo contains
+
+- `well-known/conception-well-known.yml`: the full `/.well-known/` and contract-discovery probe record (all misses, recorded with status codes)
+- `packages/conception-packages.yml`: registry search record (no first-party packages; the `github.com/conception` org is a different company in Rio de Janeiro)
+- `conformance/conception-conformance.yml`: FDA/ISSCR regime status; API standards recorded as not-applicable
+- `security/conception-domain-security.yml`: TLS/HSTS/DNSSEC/SPF/DMARC probe of conception.bio

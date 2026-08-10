@@ -1,8 +1,24 @@
 aid: conception
 name: Conception
-description: 'Conception is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Conception is a Berkeley, California biotechnology company founded in
+  2018 by CEO Matt Krisiloff (previously a director of Y Combinator Research and an
+  early OpenAI team member) and originally operated under the name Ovid Research. It
+  is building in-vitro gametogenesis (IVG) as a clinical therapy: taking a patient
+  blood draw, reprogramming the blood cells into induced pluripotent stem cells, and
+  then guiding those cells through primordial germ cell, oogonia and follicle stages
+  inside engineered three-dimensional ovarian organoids until they mature into viable
+  human eggs. Its laboratory stack combines single-cell gene-expression mapping, 3D
+  tissue engineering, high-throughput screening and computer-vision quality control,
+  and in an announcement published 2026-08-07 the company reported generating the first
+  fully stem-cell-derived human ovarian follicles containing early oocytes progressing
+  through meiosis. Conception has raised roughly USD 38 million from investors including
+  Age 1, Calm Ventures, SciFounders, Gaingels, Maiora Ventures and PEAK6 Strategic
+  Capital. It is a wet-lab therapeutic research company rather than a software vendor:
+  its entire public web presence is a two-page Framer marketing site with a science-updates
+  post and an Ashby-hosted job board, and it publishes no developer portal, no API
+  documentation, no SDKs and no machine-readable API contract of any kind.'
 url: https://raw.githubusercontent.com/api-evangelist/conception/refs/heads/main/apis.yml
+image: https://framerusercontent.com/images/PfCSS8URInnpMrqsd5bQlDQBac.png
 x-type: company
 x-source: harvest:secondary-market
 x-tier: stub
@@ -12,12 +28,65 @@ created: '2026-08-09'
 modified: '2026-08-09'
 tags:
 - Company
+- Biotechnology
+- Reproductive Health
+- Fertility
+- In Vitro Gametogenesis
+- Stem Cells
+- Regenerative Medicine
+- Life Sciences
+- Tissue Engineering
+- United States
 apis: []
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-08-09'
+  status: minimal
+  artifacts_added: 5
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: Conception is a wet-lab stem-cell therapeutics company whose entire public
+    web presence is a two-page Framer marketing site — /careers, /contact, /api and
+    /docs all return 404, and no api./docs./developer. subdomain resolves in DNS —
+    so there is no developer program or API surface to profile.
+  evidence:
+  - url: https://www.conception.bio/
+    status: 200
+  - url: https://www.conception.bio/sitemap.xml
+    status: 200
+  - url: https://www.conception.bio/.well-known/agent-card.json
+    status: 404
+  - url: https://www.conception.bio/llms.txt
+    status: 404
+  - url: https://www.conception.bio/docs
+    status: 404
+  checked: '2026-08-09'
 common:
 - type: Website
+  url: https://www.conception.bio/
+- type: Blog
+  url: https://www.conception.bio/science-and-updates
+- type: Support
+  url: mailto:hello@conception.bio
+- type: Careers
+  url: https://jobs.ashbyhq.com/Conception
+- type: LinkedIn
+  url: https://www.linkedin.com/company/conceptionbio
+- type: SecondaryMarket
   url: https://forgeglobal.com/conception_stock/
+- type: DomainSecurity
+  url: security/conception-domain-security.yml
+- type: WellKnown
+  url: well-known/conception-well-known.yml
+- type: Packages
+  url: packages/conception-packages.yml
+- type: Conformance
+  url: conformance/conception-conformance.yml
+- type: LLMsTxt
+  url: llms/conception-llms.txt
