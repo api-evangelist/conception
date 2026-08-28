@@ -18,6 +18,17 @@ description: 'Conception is a Berkeley, California biotechnology company founded
   post and an Ashby-hosted job board, and it publishes no developer portal, no API
   documentation, no SDKs and no machine-readable API contract of any kind.'
 url: https://raw.githubusercontent.com/api-evangelist/conception/refs/heads/main/apis.yml
+deliveryModel:
+  model: library
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Library · distributed through package registries, no callable service
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 image: https://framerusercontent.com/images/PfCSS8URInnpMrqsd5bQlDQBac.png
 x-type: company
 x-source: harvest:secondary-market
