@@ -29,6 +29,18 @@ deliveryModel:
   - none
   generated: '2026-08-28'
   method: derived
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - security
+  generated: '2026-09-02'
+  method: derived
 image: https://framerusercontent.com/images/PfCSS8URInnpMrqsd5bQlDQBac.png
 x-type: company
 x-source: harvest:secondary-market
