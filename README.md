@@ -64,21 +64,80 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Conception is a Berkeley, California biotechnology company founded in 2018 (originally as Ovid Research) by CEO Matt Krisiloff. It is building in-vitro gametogenesis (IVG) as a clinical therapy — reprogramming a patient's blood cells into induced pluripotent stem cells, then guiding them through primordial germ cell, oogonia and follicle stages inside engineered three-dimensional ovarian organoids until they mature into viable human eggs. In an update published 2026-08-07 the company reported the first fully stem-cell-derived human ovarian follicles containing early oocytes progressing through meiosis. It has raised roughly USD 38 million.
+Conception is a Berkeley, California biotechnology company founded in 2018 by CEO Matt Krisiloff (previously a director of Y Combinator Research and an early OpenAI team member) and originally operated under the name Ovid Research. It is building in-vitro gametogenesis (IVG) as a clinical therapy: taking a patient blood draw, reprogramming the blood cells into induced pluripotent stem cells, and then guiding those cells through primordial germ cell, oogonia and follicle stages inside engineered three-dimensional ovarian organoids until they mature into viable human eggs. Its laboratory stack combines single-cell gene-expression mapping, 3D tissue engineering, high-throughput screening and computer-vision quality control, and in an announcement published 2026-08-07 the company reported generating the first fully stem-cell-derived human ovarian follicles containing early oocytes progressing through meiosis. Conception has raised roughly USD 38 million from investors including Age 1, Calm Ventures, SciFounders, Gaingels, Maiora Ventures and PEAK6 Strategic Capital. It is a wet-lab therapeutic research company rather than a software vendor: its entire public web presence is a two-page Framer marketing site with a science-updates post and an Ashby-hosted job board, and it publishes no developer portal, no API documentation, no SDKs and no machine-readable API contract of any kind.
 
-**Conception publishes no API.** It is a wet-lab therapeutic research company, not a software vendor. Its entire public web presence is a two-page Framer marketing site plus an Ashby job board. Every `/.well-known/` path, `/openapi.json`, `/graphql`, `/mcp` and `/llms.txt` returns a genuine 404 on both `conception.bio` and `www.conception.bio`, and no `api.`, `docs.` or `developer.` subdomain resolves in DNS. That negative result is recorded with status codes in `well-known/conception-well-known.yml`.
+**Areas:** Company · Biotechnology · Reproductive Health · Fertility · In Vitro Gametogenesis · Stem Cells · Regenerative Medicine · Life Sciences · Tissue Engineering · United States
 
-- Website: https://www.conception.bio/
-- Science and updates: https://www.conception.bio/science-and-updates
-- Careers: https://jobs.ashbyhq.com/Conception
-- Secondary market: https://forgeglobal.com/conception_stock/
+## Conception on APIs.io
 
-### What is in this repo
+Everything profiled for Conception is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/conception/](https://apis.io/providers/conception/)** — or go straight to one of the APIs or properties below.
 
-| Path | What it holds |
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Conception Domain Security](https://apis.io/security/conception/conception-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.conception.bio/)
+- [Blog](https://www.conception.bio/science-and-updates)
+
+## API Evangelist rating
+
+**Kin Score 6.4** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
 |---|---|
-| `well-known/conception-well-known.yml` | Full `/.well-known/` + contract-discovery probe record (all misses, with status codes) |
-| `packages/conception-packages.yml` | Registry search record — no first-party packages on npm, PyPI, RubyGems, crates.io or Packagist |
-| `conformance/conception-conformance.yml` | FDA/ISSCR regime status; API standards recorded as not-applicable |
-| `security/conception-domain-security.yml` | TLS/HSTS/DNSSEC/SPF/DMARC probe of conception.bio |
-| `llms/conception-llms.txt` | Generated llms.txt profile of the company |
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 0.0 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 8.6** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/conception/](https://apis.io/providers/conception/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Conception: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/conception/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
